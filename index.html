@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="blocks/media.css"/>
     <link rel="stylesheet" href="blocks/body/body.css"/>
     <link rel="stylesheet" href="blocks/body/our-team/ourteam.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/material.css"/>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -219,7 +220,7 @@
             <h3 class="our-team-header">OUR TEAM</h3>
             <div class="row team-row">
                 <div class="col-xs-6 col-sm-4 col-md-4">
-                    <div class="member-box"><img class="img-responsive" src="img/max.jpg" alt="">
+                    <div class="member-box shadow-z-2"><img class="img-responsive" src="img/max.jpg" alt="">
                         <div class="member-box-bg">
                         </div>
                     </div>
@@ -227,7 +228,7 @@
                 </div>
                 
                 <div class="col-xs-6 col-sm-4 col-md-4">
-                     <div class="member-box"><img class="img-responsive" src="img/sasha.jpg" alt="">
+                     <div class="member-box shadow-z-2"><img class="img-responsive" src="img/sasha.jpg" alt="">
                     <div class="member-box-bg">
                            
                     </div>
@@ -235,7 +236,7 @@
                     <p class="member-fullname">Aleksandr Pankov</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-4">
-                     <div class="member-box"><img class="img-responsive" src="img/ann.jpg" alt="">
+                     <div class="member-box shadow-z-2"><img class="img-responsive" src="img/ann.jpg" alt="">
                     <div class="member-box-bg">
                            
                     </div>
@@ -243,7 +244,7 @@
                     <p class="member-fullname">Anna Radchenko</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-4">
-                    <div class="member-box"><img class="img-responsive" src="img/vova.jpg" alt="">
+                    <div class="member-box shadow-z-2"><img class="img-responsive" src="img/vova.jpg" alt="">
                     <div class="member-box-bg">
                            
                     </div>
@@ -251,14 +252,14 @@
                     <p class="member-fullname">Vladimir Matveev</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-4">
-                    <div class="member-box"><img class="img-responsive" src="img/igor.jpg" alt="">
+                    <div class="member-box shadow-z-2"><img class="img-responsive" src="img/igor.jpg" alt="">
                     <div class="member-box-bg">
                            
                     </div>
                     </div>
                     <p class="member-fullname">Igor Voitsekhovskiy</p>
                 </div><div class="col-xs-6 col-sm-4 col-md-4">
-                <div class="member-box"><img class="img-responsive" src="img/beardyman.jpg" alt="">
+                <div class="member-box shadow-z-2"><img class="img-responsive" src="img/beardyman.jpg" alt="">
                     <div class="member-box-bg">
                            
                     </div>
@@ -282,36 +283,36 @@
                         <form name="sentMessage" id="contactForm">
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
-                                    <label>Name</label>
-                                    <input type="text" class="form-control change_opacity" placeholder="Name" id="name">
+                                    <label class="floating-label">Name</label>
+                                    <input type="text" class="form-control change_opacity" placeholder="Name" data-hint="Please, enter your name here" id="name">
                                     <p class="help-block error-message" data-error-for='name'></p>
                                 </div>
                             </div>
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Email Address</label>
-                                    <input type="text" class="form-control change_opacity" placeholder="user@example.com" id="email" >
+                                    <input type="text" class="form-control change_opacity" data-hint="A valid email should contain an @ symbol" placeholder="user@example.com" id="email" >
                                     <p class="help-block error-message" data-error-for='email'></p>
                                 </div>
                             </div>
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Phone Number</label>
-                                    <input type="text" class="form-control change_opacity" placeholder="+380XXXXXXXXX" id="phone" >
+                                    <input type="text" class="form-control change_opacity " data-hint="Enter only numbers" placeholder="+380XXXXXXXXX" id="phone" >
                                     <p class="help-block error-message" data-error-for='phone'></p>
                                 </div>
                             </div>
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Message</label>
-                                    <textarea rows="5" class="form-control change_opacity" placeholder="Message" id="message"></textarea>
+                                    <textarea rows="5" class="form-control change_opacity" data-hint="Please, write everything you want" placeholder="Message" id="message"></textarea>
                                     <p class="help-block error-message" data-error-for='message'></p>
                                 </div>
                             </div>
                             <div id="success"></div>
                             <div class="row">
                                 <div class="form-group col-xs-12">
-                                    <button type="submit" id='submit' class="btn btn-lg col-xs-12 form-button audioHover audioClick">Send</button>
+                                    <button type="submit" id='submit' class="btn btn-primary btn-lg col-xs-12 form-button audioHover audioClick">Send</button>
                                 </div>
                             </div>
                         </form>
@@ -375,7 +376,9 @@
 
     <!-- Audio and EasyAudioEffects.js -->
     <script src="js/jquery.easyaudioeffects.1.0.0.min.js"></script>
-
+    <!-- Testing material design -->
+    <script src="js/material.js"></script>
+    <script src="bower_components/bootstrap-material-design/scripts/material.js"></script>
     <script>
         $('.audioHover').easyAudioEffects({
             ogg : "media/hover.ogg",
