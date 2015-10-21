@@ -58,3 +58,18 @@ footer h3
 {
     visibility: hidden;
 }
+
+#scrollup {
+position: fixed; /* фиксированная позиция */
+opacity: 0.8; /* прозрачность */
+background: #b2dfdb;
+border-radius: 5px; /* скругление углов */
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+right: 2%; /* отступ слева */
+bottom: 2%; /* отступ снизу */
+display: none; /* спрятать блок */
+cursor: pointer;
+float: right;
+padding: 1%;
+}
