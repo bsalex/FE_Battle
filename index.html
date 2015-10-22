@@ -24,6 +24,10 @@
     <link rel="stylesheet" href="blocks/body/body.css"/>
     <link rel="stylesheet" href="blocks/body/our-team/ourteam.css"/>
     <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/material.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.css"/>
+    <!-- <link rel="stylesheet" href="bower_components/noUiSlider/nouislider.min.css"/> -->
+    <!-- <link rel="stylesheet" href="bower_components/noUiSlider/nouislider.pips.css"/> -->
+   
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -270,7 +274,7 @@
         </div>
     </section>
 
-    <section id="contact">
+    <!-- <section id="contact">
             <div class="container">
 
                 <div class="row">
@@ -318,6 +322,107 @@
                         </form>
                     </div>
                 </div>
+            </div>
+        </section> -->
+
+         <section id="contacts">
+            <div class="container">
+
+                <div class="row">
+                    <div class="text-center contacts-header">
+                            <h2>Contact us</h2>
+                    </div>
+
+                    <!-- START FORM FOR CLIENTS -->
+                    <div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-1">
+
+                        <form name="sentMessage" id="contactForm">
+                            <fieldset>
+                            <legend>For Clients:</legend>
+                            
+                            <div class="form-group floating-label-form-group controls">
+                                <label class="floating-label" for="name">Name</label>
+                                <input type="text" class="form-control change_opacity" placeholder="Name" data-hint="Please, enter your name here" id="name">
+                                <p class="help-block error-message" data-error-for='name'></p>
+                            </div>
+                            <div class="form-group floating-label-form-group controls">
+                                <label class="floating-label" for="name">Organization</label>
+                                <input type="text" class="form-control change_opacity" placeholder="Organization Name" data-hint="Please, enter organization name here" id="name">
+                                <p class="help-block error-message" data-error-for='name'></p>
+                            </div>
+                        
+                            <div class="form-group floating-label-form-group controls">
+                                    <label for="email">Email Address</label>
+                                    <input type="text" class="form-control change_opacity" data-hint="A valid email should contain an @ symbol" placeholder="user@example.com" id="email" >
+                                    <p class="help-block error-message" data-error-for='email'></p>
+                            </div>
+                            <div class="form-group floating-label-form-group controls">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="text" class="form-control change_opacity " data-hint="Enter only numbers" placeholder="+380XXXXXXXXX" id="phone" >
+                                    <p class="help-block error-message" data-error-for='phone'></p>
+                            </div>
+                            
+                            <div class="form-group floating-label-form-group controls">
+                                    <label for="message">Message</label>
+                                    <textarea rows="5" class="form-control change_opacity" data-hint="Please, write everything you want" placeholder="Message" id="message"></textarea>
+                                    <p class="help-block error-message" data-error-for='message'></p>
+                            </div>
+                            
+                            <div id="success"></div>
+                            <div class="form-group contact-form-button">
+                                    <button type="submit" id='submit' class="btn btn-primary btn-lg col-xs-12 form-button audioHover audioClick">Send</button>
+                            </div>
+                            
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!-- END FORM FOR CLIENTS -->
+                    <!-- START FORM FOR REFEREE -->
+                    <div class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-2">
+                        <form action="">
+                            <fieldset>
+                                <legend>For referee:</legend>
+                                <div class="form-group">
+                                    <label>Estimate the site of our team:</label>
+                                    <div class="checkbox">
+                                        <label class="col-xs-4">
+                                            <input type="checkbox">Responsive
+                                        </label>
+                                        <label class="col-xs-4">
+                                            <input type="checkbox">Clean Code
+                                        </label>
+                                        <label class="col-xs-4">
+                                            <input type="checkbox">Cross-browser
+                                        </label>
+                                    </div>
+                                </div>                                
+                                <div class="form-group">   
+
+                                      <label class="form-referee-html-structure-label">HTML Structure</label>
+                                      <div class="slider shor svert"></div>
+                                      <select name="htmlMark" id="form-referee-select-html"></select>
+                                </div>
+                                <div class="form-group">   
+     
+                                      <label>CSS3</label>
+                                      <div class="slider shor svert"></div>
+                                       <select name="cssMark" id="form-referee-select-css"></select>
+                                </div>                                
+                                <div class="form-group form-referee-feedback-box">
+                                    <label for="form-referee-feedback">Feedback</label>
+                                    <div>
+                                        <textarea class="form-control floating-label" data-hint="Please, be true and write either good or bad thinds" placeholder="Your feedback must be here" rows="2" id="form-referee-feedback"></textarea>                               
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" id='submit' class="btn btn-primary btn-lg col-xs-12 form-button audioHover audioClick">Send</button>
+                            </div>
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -376,9 +481,12 @@
 
     <!-- Audio and EasyAudioEffects.js -->
     <script src="js/jquery.easyaudioeffects.1.0.0.min.js"></script>
+    <!-- noUiSlider for form -->
+    <script src="bower_components/noUiSlider/nouislider.min.js"></script>
     <!-- Testing material design -->
     <script src="js/material.js"></script>
     <script src="bower_components/bootstrap-material-design/scripts/material.js"></script>
+    <script src="bower_components/bootstrap-material-design/scripts/ripples.js"></script>
     <script>
         $('.audioHover').easyAudioEffects({
             ogg : "media/hover.ogg",
@@ -393,9 +501,9 @@
         });
     </script>
 
-    <audio class="audioPlayer" controls loop autoplay style="display: none">
+  <!--   <audio class="audioPlayer" controls loop autoplay style="display: none">
         <source src="media/music_cut.mp3" type="audio/mpeg">
-    </audio>
+    </audio> -->
 
     <!-- Include parallax effect
     <script type="text/javascript">

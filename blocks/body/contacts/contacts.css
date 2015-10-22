@@ -1,4 +1,4 @@
-.form-name
+.contacts-header
 {
     margin: 20px 0;
 }
@@ -31,13 +31,23 @@ textarea.form-control
             transition: all .35s;
     text-transform: uppercase;
 }
-
+form-group {
+    margin-botom: 10%;
+} 
 .form-button:hover
 {
     color: white;
     background-color: #ff5252;
 }
-
+.check {
+    margin-right: 5px;
+}
+.form-referee-html-structure-label{
+    margin-top: 10px;
+}
+.form-referee-feedback-box label{
+    margin-top: 15px;
+}
 .change_opacity::-webkit-input-placeholder
 {
     -webkit-transition: opacity 1s ease;
