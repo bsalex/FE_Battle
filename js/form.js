@@ -19,17 +19,18 @@ function init() {
 }
 
 function clearErrors() {
-    $('#contactForm input').click(function(){        
-        $( this ).parent().next().css("visibility", "hidden");        
-    });
-    $('#contactForm textarea').click(function(){        
-        $( this ).parent().next().css("visibility", "hidden");        
+
+    // $('#contactForm input, #contactForm textarea').click(function(){        
+    //     $( this ).parent().next().css("visibility", "hidden");        
+    // });
+    $('#contactForm input, #contactForm textarea').click(function(){        
+        $( this ).parent().next().text("");        
     });
 };
 
-function showErrors() {
-    $( ".error-message" ).css("visibility", "visible");
-}
+// function showErrors() {
+//     $( ".error-message" ).css("visibility", "visible");
+// }
 
 function processRegistration(form) {
     var data = getRegistrationFormData();
@@ -113,7 +114,7 @@ function validaRegistrationData(formData) {
 
 function highlightErrors(form, errors) {
     var $form = $(form);
-    showErrors();
+    // showErrors();
     for (var field in errors) {
         var fieldError = errors[field];
 

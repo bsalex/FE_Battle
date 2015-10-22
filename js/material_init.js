@@ -1,7 +1,7 @@
 "use strict"
 
 // Edit by Pankov A
-$("document").ready(function() {
+$(document).ready(function() {
 	$.material.init();
 
 
