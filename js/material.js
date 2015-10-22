@@ -72,7 +72,7 @@ for ( var i = 0; i <= 10; i += 1 ){
 });
 
 	selectCss.addEventListener('change', function(){
-	htmlSlider.noUiSlider.set([this.value, null]);
+	cssSlider.noUiSlider.set([this.value, null]);
 });
 
 
