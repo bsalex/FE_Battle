@@ -12,6 +12,23 @@ function init() {
         processRegistration(this);
         event.preventDefault();
     });
+    
+    clearErrors();
+    
+
+}
+
+function clearErrors() {
+    $('#contactForm input').click(function(){        
+        $( this ).parent().next().css("visibility", "hidden");        
+    });
+    $('#contactForm textarea').click(function(){        
+        $( this ).parent().next().css("visibility", "hidden");        
+    });
+};
+
+function showErrors() {
+    $( ".error-message" ).css("visibility", "visible");
 }
 
 function processRegistration(form) {
@@ -96,10 +113,12 @@ function validaRegistrationData(formData) {
 
 function highlightErrors(form, errors) {
     var $form = $(form);
-
+    showErrors();
     for (var field in errors) {
         var fieldError = errors[field];
-        $('.help-block[data-error-for=' + field + ']', $form).text(fieldError);
+
+         $('.help-block[data-error-for=' + field + ']', $form).text(fieldError);
+      
     }
 }
 
