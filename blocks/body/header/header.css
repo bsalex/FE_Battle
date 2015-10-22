@@ -64,16 +64,32 @@ header
     fill: rgba(219, 219, 219, .71);
 }
 
-#mybtn{
-  margin: 16% 0;
-  float: right;
-  background: url("../../../img/bell.png") no-repeat center;
-  background-size: auto;
-  padding: 50px;
-  border: transparent;    
-}
 
-#mybtn:active, 
-#mybtn:focus {
+#changeStateButton{
+     float: right;
+     margin-top: 7em;
+     margin-right: 1%;
+     padding: 0;
+     background:none;
+     border:0;
+    }
+
+#changeStateButton: active,
+#changeStateButton: focus{
     outline: none;
-}
+    border:0;
+  }
+
+#mybtn{
+    padding: 0;
+    border:0;
+  }
+
+ 
+
+  #mybtn: active,
+  #mybtn: focus{
+    outline: none;
+    border:0;
+  }
+

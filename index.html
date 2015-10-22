@@ -136,7 +136,7 @@
             </video>
         </div>
 
-        <button onclick="myFunction()"<img id="mybtn"></button>
+         <button id="changeStateButton" state='false'><img id="mybtn" src = "img/1b.png">
         
     </header>
 
@@ -617,21 +617,22 @@
 
     <script>
 
-         function myFunction(){
-       
-         var myaudio = document.getElementById("myaudio");
+         document.getElementById("changeStateButton").onclick = function () {
+    var
+        myaudio = document.getElementById("myaudio"),
+        span = this.querySelector('span'),
+        mybtn = document.getElementById("mybtn");
 
-             if(myaudio.paused == true){
-
-                 document.getElementById("myaudio").play();
-        
-                 }else if (myaudio.paused == false){
-
-                 document.getElementById("myaudio").pause();
-                 document.getElementById("mybtn").src="img/bell.png";
-
-             }
-         }
+    if (myaudio.paused) {
+      myaudio.play();
+      mybtn.src = "img/1b.png";
+      //span.innerHTML = "Выкл звук";
+    } else {
+      myaudio.pause();
+      mybtn.src = "img/2b.png";
+      span.innerHTML = "Вкл звук";
+    }
+  };
 
      </script>
 
