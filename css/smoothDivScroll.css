@@ -11,7 +11,7 @@ div.scrollingHotSpotLeft
 	background-position: center center;
 	position: absolute;
 	z-index: 200;
-	left: 10%;
+	left: 0;
 	/*  The first url is for Firefox and other browsers, the second is for Internet Explorer */
 	cursor: url(../images/cursors/cursor_arrow_left.png), url(../images/cursors/cursor_arrow_left.cur),w-resize;
 }
@@ -39,7 +39,7 @@ div.scrollingHotSpotRight
 	background-position: center center;
 	position: absolute;
 	z-index: 200;
-	right: 10%;
+	right: 0;
 	cursor: url(../images/cursors/cursor_arrow_right.png), url(../images/cursors/cursor_arrow_right.cur),e-resize;
 }
 
@@ -62,15 +62,13 @@ div.scrollWrapper
 {
 	position: relative;
 	overflow: hidden;
-	width: 100%;
-	margin: auto;
+	width: auto;
 	height: 100%;
 }
 
 div.scrollableArea
 {
 	position: relative;
-	width: 100%;
-	margin: auto;
+	width: auto;
 	height: 100%;
 }
