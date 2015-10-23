@@ -19,7 +19,7 @@ div.scrollingHotSpotLeft
 /* Visible left hotspot */
 div.scrollingHotSpotLeftVisible
 {
-	background-image: url(../images/arrow_left.gif);				
+	background-image: url(../images/arrow_left.png);				
 	background-color: #fff;
 	background-repeat: no-repeat;
 	opacity: 0.35; /* Standard CSS3 opacity setting */
@@ -46,7 +46,7 @@ div.scrollingHotSpotRight
 /* Visible right hotspot */
 div.scrollingHotSpotRightVisible
 {
-	background-image: url(../images/arrow_right.gif);
+	background-image: url(../images/arrow_right.png);
 	background-color: #fff;
 	background-repeat: no-repeat;
 	opacity: 0.35;
