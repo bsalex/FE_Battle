@@ -19,18 +19,10 @@ function init() {
 }
 
 function clearErrors() {
-
-    // $('#contactForm input, #contactForm textarea').click(function(){        
-    //     $( this ).parent().next().css("visibility", "hidden");        
-    // });
-    $('#contactForm input, #contactForm textarea').click(function(){        
+    $('#contactForm input, #contactForm textarea').focus(function(){        
         $( this ).parent().next().text("");        
     });
 };
-
-// function showErrors() {
-//     $( ".error-message" ).css("visibility", "visible");
-// }
 
 function processRegistration(form) {
     var data = getRegistrationFormData();
